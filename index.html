@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22292f" />
+  <meta name="description" content="Многофункциональные заметки и статистика для игр" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./assets/images/icon-192.png" />
+  <link rel="apple-touch-icon" href="./assets/images/icon-192.png" />
+  <title>GameNotes App</title>
+  <!-- Стили фона будут установлены через JavaScript -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/global.css" />
+  <link rel="stylesheet" href="./src/styles/components.css" />
+  <link rel="stylesheet" href="./src/styles/animations.css" />
+  <link rel="stylesheet" href="./src/styles/player-cards.css" />
+  <link rel="stylesheet" href="./src/styles/pages.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <div id="pwa-install-container" class="hidden">
+    <div class="install-prompt glass">
+      <h3>Установить приложение?</h3>
+      <p>Установите приложение на ваше устройство для быстрого доступа и работы офлайн.</p>
+      <div class="button-group">
+        <button id="install-button" class="primary-button">Установить</button>
+        <button id="dismiss-button" class="secondary-button">Позже</button>
+      </div>
+    </div>
+  </div>
+  <div id="toast-container"></div>
+  <div id="modal-container"></div>
+  <script src="./src/services/storage.js" type="module"></script>
+  <script src="./src/services/pwa.js" type="module"></script>
+  <script src="./src/services/ui.js" type="module"></script>
+  <script src="./src/services/background.js" type="module"></script>
+  <script src="./src/services/toast.js" type="module"></script>
+  <script src="./src/main.js" type="module"></script>
+</body>
+</html>
