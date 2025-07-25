@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перенаправление</title>
+    <script>
+        // Определяем текущий URL
+        const currentPath = window.location.pathname;
+        const currentUrl = window.location.href;
+        
+        // Создаем базовый путь для GitHub Pages
+        let basePath = '';
+        if (window.location.hostname.includes('github.io')) {
+            const pathSegments = currentPath.split('/');
+            if (pathSegments.length > 1) {
+                basePath = '/' + pathSegments[1];
+            }
+        }
+        
+        // Перенаправляем на главную страницу
+        window.location.href = window.location.origin + basePath + '/';
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #111927;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            padding: 2rem;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            max-width: 500px;
+        }
+        a {
+            color: #3f8cff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Перенаправление...</h2>
+        <p>Если вы не были перенаправлены автоматически, нажмите <a href="./">здесь</a>.</p>
+    </div>
+</body>
+</html>
